@@ -88,4 +88,3 @@ For questions, improvements, or real device integration, contact: morningstarxcd
 
 ---
 
-*This project is original work. All code, logic, and design are by morningstarxcdcode. No AI or code generator was used in its creation.*
