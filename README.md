@@ -87,4 +87,7 @@ See `.env.example` for required variables.
 For questions, improvements, or real device integration, contact: morningstarxcdcode
 
 ---
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3dd2d29 (Update README.md with latest manual changes)
