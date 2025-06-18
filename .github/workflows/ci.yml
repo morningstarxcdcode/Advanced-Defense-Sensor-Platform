@@ -11,13 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Clear node_modules and package-lock.json
+        run: |
+          rm -rf node_modules package-lock.json
+
       - name: Install dependencies
         run: npm install
+
       - name: Lint
         run: npm run lint
+
       - name: Build
         run: npm run build
