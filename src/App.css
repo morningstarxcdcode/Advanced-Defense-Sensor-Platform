@@ -1,0 +1,395 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Enhanced App.css for Advanced Defense & Sensor Platform Dashboard */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #0c1426 0%, #1a2332 100%);
+  color: #f5f6fa;
+  min-height: 100vh;
+}
+
+.dashboard {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.dashboard-header {
+  background: rgba(35, 41, 58, 0.95);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #3742fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header h1 {
+  color: #3742fa;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header-controls {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-tabs button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #4e79a7;
+  color: #bfc9d9;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs button.active,
+.nav-tabs button:hover {
+  background: #4e79a7;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #bfc9d9;
+}
+
+.logout-btn {
+  padding: 0.4rem 0.8rem;
+  background: #e15759;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c73e39;
+}
+
+.alert-banner {
+  background: rgba(225, 87, 89, 0.95);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e15759;
+  animation: pulse 2s infinite;
+}
+
+.alert {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.system-status {
+  background: rgba(23, 29, 58, 0.7);
+  padding: 0.8rem 2rem;
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid #2f3542;
+  font-size: 0.9rem;
+}
+
+.status-item {
+  color: #bfc9d9;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+.charts {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.sensor-chart {
+  background: linear-gradient(145deg, #23293a 0%, #2c3e50 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(30, 40, 60, 0.3);
+  width: 320px;
+  border: 1px solid rgba(79, 121, 167, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sensor-chart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(30, 40, 60, 0.4);
+}
+
+.sensor-chart h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #bfc9d9;
+  font-size: 1.1rem;
+}
+
+.chart-value {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3742fa;
+  margin-bottom: 1rem;
+}
+
+/* Login Component Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c1426 0%, #1a2332 100%);
+}
+
+.login-card {
+  background: rgba(35, 41, 58, 0.95);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(79, 121, 167, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 2rem;
+  color: #3742fa;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #bfc9d9;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #4e79a7;
+  border-radius: 6px;
+  background: rgba(23, 29, 58, 0.8);
+  color: #f5f6fa;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3742fa;
+  box-shadow: 0 0 0 2px rgba(55, 66, 250, 0.2);
+}
+
+.error-message {
+  background: rgba(225, 87, 89, 0.9);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #3742fa;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-card button:hover:not(:disabled) {
+  background: #2f32e2;
+}
+
+.login-card button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.demo-credentials {
+  margin-top: 1rem;
+  color: #bfc9d9;
+  opacity: 0.7;
+}
+
+/* Map Interface Styles */
+.map-container {
+  background: rgba(35, 41, 58, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(30, 40, 60, 0.3);
+  border: 1px solid rgba(79, 121, 167, 0.2);
+}
+
+.map-container h3 {
+  margin-bottom: 1rem;
+  color: #bfc9d9;
+  text-align: center;
+}
+
+/* Advanced Charts Styles */
+.advanced-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.chart-panel {
+  background: rgba(35, 41, 58, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(30, 40, 60, 0.3);
+  border: 1px solid rgba(79, 121, 167, 0.2);
+}
+
+.chart-panel h3 {
+  margin-bottom: 1rem;
+  color: #bfc9d9;
+  text-align: center;
+}
+
+.anomaly-summary {
+  background: rgba(35, 41, 58, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(30, 40, 60, 0.3);
+  border: 1px solid rgba(79, 121, 167, 0.2);
+}
+
+.anomaly-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.anomaly-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(225, 87, 89, 0.1);
+  border-left: 3px solid #e15759;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.anomaly-time {
+  font-size: 0.9rem;
+  color: #bfc9d9;
+}
+
+.anomaly-reason {
+  font-weight: bold;
+  color: #e15759;
+}
+
+.anomaly-values {
+  font-size: 0.8rem;
+  color: #bfc9d9;
+  font-family: monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .system-status {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
