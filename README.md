@@ -112,12 +112,15 @@ Let's get started with the setup.
 ## Screenshots
 
 ### Dashboard
-![Dashboard](assets/screens/dashboard.png)
+<img width="1001" alt="Screenshot 2025-06-18 at 10 22 08 AM" src="https://github.com/user-attachments/assets/bb29c9c3-73d9-4273-8351-ac10678c628d" />
+
 
 ### Analytics
-![Analytics](assets/screens/analytics.png)
+<img width="947" alt="Screenshot 2025-06-18 at 10 22 32 AM" src="https://github.com/user-attachments/assets/0bd519d0-09b3-4675-921a-b9b7a579860a" />
+
 
 ### Map
-![Map](assets/screens/map.png)
+<img width="997" alt="Screenshot 2025-06-18 at 10 22 44 AM" src="https://github.com/user-attachments/assets/959a2e82-e5c7-4b9d-904f-59e211f9714b" />
+
 
 if you any help then make a issue or pull req ok !
