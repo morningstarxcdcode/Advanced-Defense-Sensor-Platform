@@ -1,0 +1,22 @@
+name: Swagger UI Docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  swagger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Swagger CLI
+        run: npm install -g swagger-ui-watcher
+      - name: Generate Swagger UI
+        run: |
+          if [ -f swagger.yaml ]; then
+            swagger-ui-watcher swagger.yaml
+          else
+            echo "No swagger.yaml found."
+          fi
