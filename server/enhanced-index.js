@@ -192,6 +192,37 @@ app.get('/', (req, res) => {
   res.send('Advanced Defense & Sensor Platform Backend - Enhanced Version');
 });
 
+// --- Real Device Integration ---
+// Accept sensor data from real hardware via HTTP POST
+app.post('/api/sensor', (req, res) => {
+  if (MODE !== 'real') {
+    return res.status(400).json({ error: 'Not in real device mode' });
+  }
+  const { id, type, value, event, meta, timestamp } = req.body;
+  if (!id || !type || typeof value !== 'number' || !timestamp) {
+    return res.status(400).json({ error: 'Missing or invalid sensor data' });
+  }
+  // Enrich and store
+  const anomaly = detectAnomalyML({
+    radar: type === 'radar' ? value : 0,
+    seismic: type === 'seismic' ? value : 0,
+    infrared: type === 'infrared' ? value : 0,
+    timestamp
+  }, historicalData);
+  storeSensorData({
+    radar: type === 'radar' ? value : 0,
+    seismic: type === 'seismic' ? value : 0,
+    infrared: type === 'infrared' ? value : 0,
+    anomaly
+  });
+  // Broadcast to clients
+  const sensorPayload = {
+    id, name: req.body.name || id, lat: req.body.lat, lng: req.body.lng, type, value, event, meta, timestamp, anomaly
+  };
+  broadcast({ sensors: [sensorPayload], scenario: 'Real Device', simulation: false });
+  res.json({ success: true, anomaly });
+});
+
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
   console.log(`Advanced Backend server running on port ${PORT}`);
